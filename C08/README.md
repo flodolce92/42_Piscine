@@ -1,0 +1,7 @@
+# C08
+- [ex00: ft.h](ex00/ft.h)
+- [ex01: ft_boolean.h](ex01/ft_boolean.h)
+- [ex02: ft_abs.h](ex02/ft_abs.h)
+- [ex03: ft_point.h](ex03/ft_point.h)
+- [ex04: ft_strs_to_tab.c](ex04/ft_strs_to_tab.c)
+- [ex05: ft_show_tab.c](ex05/ft_show_tab.c)

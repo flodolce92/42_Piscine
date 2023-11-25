@@ -1,1 +1,10 @@
 # SHELL00
+- [ex00: Z](ex00/z)
+- [ex01: testShell00](ex01/)
+- [ex02: exo02](ex02/)
+- [ex04: midLS](ex04/midLS)
+- [ex05: GiT commit](ex05/git_commit.sh)
+- [ex06: gitignore](ex06/git_ignore.sh)
+- [ex07: diff](ex07/b)
+- [ex08: clean](ex08/clean)
+- [ex09: 42 file](ex09/ft_magic)
