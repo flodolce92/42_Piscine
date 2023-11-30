@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush01.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: flo-dolc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/23 11:49:44 by flo-dolc          #+#    #+#             */
+/*   Updated: 2023/09/23 16:34:43 by flo-dolc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+// prototipazione funzione putchar
+void	ft_putchar(char c);
+
+// controllo e stampa
+void	print_char(int a, int b, int x, int y)
+{
+	if ((a == 0 && b == 0) || (a == x - 1 && b == y - 1))
+		ft_putchar('/');
+	else if ((a == 0 && b == y - 1) || (a == x - 1 && b == 0))
+		ft_putchar('\\');
+	else if ((a == 0 || a == x - 1) || (b == 0 || b == y - 1))
+		ft_putchar('*');
+	else
+		ft_putchar(' ');
+}
+
+// creazione griglia
+void	rush(int x, int y)
+{
+	int	a;
+	int	b;
+
+	if (x <= 0 || y <= 0)
+	{
+		write(1, "Errore numero negativo o zero.\n", 31);
+		return ;
+	}
+	b = 0;
+	while (b < y)
+	{
+		a = 0;
+		while (a < x)
+		{
+			print_char(a, b, x, y);
+			a++;
+		}
+		b++;
+		ft_putchar('\n');
+	}
+}
