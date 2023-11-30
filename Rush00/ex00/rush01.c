@@ -15,6 +15,8 @@
 // prototipazione funzione putchar
 void	ft_putchar(char c);
 
+void	ft_putstr(char *str);
+
 // controllo e stampa
 void	print_char(int a, int b, int x, int y)
 {
@@ -36,7 +38,8 @@ void	rush(int x, int y)
 
 	if (x <= 0 || y <= 0)
 	{
-		write(1, "Errore numero negativo o zero.\n", 31);
+		ft_putstr("Invalid number.\n");
+		ft_putstr("Please insert only positive numbers in the int range.\n");
 		return ;
 	}
 	b = 0;
