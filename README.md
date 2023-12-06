@@ -59,6 +59,7 @@ This are all the C project I've done during the Piscine in 42Rome.
 - [ex01: ft_putstr.c](C04/ex01/ft_putstr.c)
 - [ex02: ft_putnbr.c](C04/ex02/ft_putnbr.c)
 - [ex03: ft_atoi.c](C04/ex03/ft_atoi.c)
+- [ex04: ft_putnbr_base.c](C04/ex04/ft_putnbr_base.c)
 
 ## [C05](C05/)
 - [ex00: ft_iterative_factorial.c](C05/ex00/ft_iterative_factorial.c)
