@@ -21,6 +21,7 @@ This are all the C project I've done during the Piscine in 42Rome.
 - [ex05: ft_print_comb.c](C00/ex05/ft_print_comb.c)
 - [ex06: ft_print_comb2.c](C00/ex06/ft_print_comb2.c)
 - [ex07: ft_putnbr.c](C00/ex07/ft_putnbr.c)
+- [ex08: ft_print_combn.c](C00/ex08/ft_print_combn.c)
 
 ## [C01](C01/)
 - [ex00: ft_ft.c](C01/ex00/ft_ft.c)

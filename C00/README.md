@@ -7,3 +7,4 @@
 - [ex05: ft_print_comb.c](ex05/ft_print_comb.c)
 - [ex06: ft_print_comb2.c](ex06/ft_print_comb2.c)
 - [ex07: ft_putnbr.c](ex07/ft_putnbr.c)
+- [ex08: ft_print_combn.c](ex08/ft_print_combn.c)
