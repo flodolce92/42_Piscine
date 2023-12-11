@@ -6,7 +6,7 @@
 /*   By: flo-dolc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 09:07:21 by flo-dolc          #+#    #+#             */
-/*   Updated: 2023/10/10 09:13:22 by flo-dolc         ###   ########.fr       */
+/*   Updated: 2024/01/12 23:58:21 by flo-dolc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	count_words(char *str, char *charset)
 	while (str[i] != '\0')
 	{
 		if (is_inset(str[i], charset) == 0
-			&& is_inset(str[i + 1] == 1, charset))
+			&& is_inset(str[i + 1], charset) == 1)
 			count++;
 		i++;
 	}
@@ -63,7 +63,6 @@ void	fill_split(char **split, char *str, char *charset)
 {
 	int	word;
 	int	i;
-	int	j;
 	int	len;
 
 	word = 0;
@@ -74,7 +73,6 @@ void	fill_split(char **split, char *str, char *charset)
 			i++;
 		else
 		{
-			j = 0;
 			len = 1;
 			while (is_inset(str[i + len], charset) == 0)
 				len++;
