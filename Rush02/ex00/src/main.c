@@ -12,10 +12,6 @@
 
 #include "ft.h"
 
-int	parse_dict(t_dict **headDict, char *str)
-{
-}
-
 char	*add_char(char *str, char buf)
 {
 	char	*temp;
@@ -34,6 +30,81 @@ char	*add_char(char *str, char buf)
 	temp[i + 1] = '\0';
 	free(str);
 	return (temp);
+}
+
+int	new_element(t_dict **headDict, int nb, char *literal)
+{
+	t_dict	*new;
+
+	new = (t_dict *) malloc(sizeof(t_dict));
+	new->nb = nb;
+	new->literal = ft_strdup(literal);
+	new->next = NULL;
+	if (headDict)
+	{
+		new->next = *headDict;
+		*headDict = new;
+	}
+	else
+	{
+		*headDict = new;
+	}
+	return (1);
+}
+
+int	get_nb(int *nb, char *str)
+{
+	char	*temp;
+	int		i;
+
+	i = 0;
+	temp = (char *) malloc(sizeof(char));
+	temp[0] = '\0';
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		temp = add_char(temp, str[i]);
+		i++;
+	}
+	*nb = ft_atoi(temp);
+	return (1);
+}
+
+int	get_val(char **literal, char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+		i++;
+	while (str[i] == ' ')
+		i++;
+	if (str[i] != ':')
+		return (0);
+	i++;
+	while (str[i] == ' ')
+		i++;
+	while (str[i] >= 'a' && str[i] <= 'z')
+	{
+		*literal = add_char(*literal, str[i]);
+		i++;
+	}
+	return (1);
+}
+
+int	parse_dict(t_dict **headDict, char *str)
+{
+	int		nb;
+	char	*literal;
+
+	literal = (char *) malloc(sizeof(char));
+	literal[0] = '\0';
+	if (!get_nb(&nb, str))
+		return (0);
+	if (!get_val(&literal, str))
+		return (0);
+	new_element(headDict, nb, literal);
+	printf("This %p : Num %d : Lit %s : Next %p\n", (*headDict), (*headDict)->nb, (*headDict)->literal, (*headDict)->next);
+	return (1);
 }
 
 int	read_file(int fd, t_dict **headDict)
@@ -98,6 +169,7 @@ int	main(int ac, char **av)
 	char	*dictpath;
 	char	*nb;
 
+	dict = NULL;
 	if (ac > 3)
 		ft_putstr("Too many arguments.\n");
 	else if (ac == 1)

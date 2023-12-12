@@ -21,13 +21,14 @@
 typedef struct s_dict
 {
 	int				nb;
-	char			*wr_nb;
+	char			*literal;
 	struct s_dict	*next;
 }	t_dict;
 
 int		ft_atoi(char *str);
 void	ft_putstr(char *str);
 int		ft_str_is_numeric(char *str);
+char	*ft_strdup(char *src);
 int		ft_strlen(char *str);
 
 #endif
