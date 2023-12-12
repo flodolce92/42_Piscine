@@ -84,6 +84,8 @@ This are all the C project I've done during the Piscine in 42Rome.
 - [ex01: ft_range.c](C07/ex01/ft_range.c)
 - [ex02: ft_ultimate_range.c](C07/ex02/ft_ultimate_range.c)
 - [ex03: ft_strjoin.c](C07/ex03/ft_strjoin.c)
+- [ex04: ft_convert_base.c](C07/ex04)
+- [ex05: ft_split.c](C07/ex05/ft_split.c)
 
 ## [C08](C08/)
 - [ex00: ft.h](C08/ex00/ft.h)
