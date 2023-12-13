@@ -6,7 +6,7 @@
 /*   By: flo-dolc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 06:40:00 by flo-dolc          #+#    #+#             */
-/*   Updated: 2023/12/06 10:39:47 by flo-dolc         ###   ########.fr       */
+/*   Updated: 2023/12/13 01:27:20 by flo-dolc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,6 @@ int	ft_atoi_base(char *str, char *base)
 	while (is_valid_nbr(str[i]))
 	{
 		res = res * nbase + get_nbr(str[i], base);
-		printf("%d\n", get_nbr(str[i], base));
 		i++;
 	}
 	return (res * neg);
