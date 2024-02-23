@@ -1,5 +1,5 @@
-# 42_C_Piscine
-This are all the C project I've done during the Piscine in 42Rome.
+# 42 C Piscine
+This are all the project I've done during the Piscine in 42Rome.
 
 ## [Shell00](Shell00/)
 - [ex00: Z](Shell00/ex00/z)
